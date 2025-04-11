@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ./.github/actions/my-action
+      - uses: zsol/action-playground@v1
         with:
           directories: example_input
