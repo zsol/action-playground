@@ -9,4 +9,4 @@ jobs:
       - uses: actions/checkout@v4
       - uses: zsol/action-playground@v2
         with:
-          directories: example_inputHELLO
+          directories: example_input
