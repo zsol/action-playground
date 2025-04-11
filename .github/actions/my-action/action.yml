@@ -5,8 +5,7 @@ inputs:
     required: true
     description: "Input directories to crawl"
 runs:
-  using: "composite"
-  steps:
-    - uses: actions/setup-python@v5
-    - run: python my_script.py ${{inputs.directories}}
-      shell: bash
+  using: "docker"
+  image: Dockerfile
+  args:
+    - ${{ inputs.directories }}
