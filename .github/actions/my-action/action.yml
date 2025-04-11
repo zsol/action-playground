@@ -1,0 +1,11 @@
+name: "My custom action"
+description: "Run a python script"
+inputs:
+  directories:
+    required: true
+    description: "Input directories to crawl"
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/setup-python@v5
+    - run: python my_script.py ${{inputs.directories}}
